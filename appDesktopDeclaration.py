@@ -1,7 +1,9 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QComboBox, QPushButton, QVBoxLayout, QWidget, QTextEdit
-from PySide6.QtGui import QTextOption
-
+try:
+    from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QComboBox, QPushButton, QVBoxLayout, QWidget, QTextEdit
+    from PySide6.QtGui import QTextOption
+except ImportError:
+    print("No PySide6")
 
 class MainWindow(QMainWindow):
     def __init__(self):
